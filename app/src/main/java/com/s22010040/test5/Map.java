@@ -39,11 +39,11 @@ public class Map extends AppCompatActivity implements  OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        // Initialize views
+
         editTextAddress = findViewById(R.id.editTextAddress);
         buttonShowLocation = findViewById(R.id.buttonShowLocation);
 
-        // Check if geocoder is available
+
         if (Geocoder.isPresent()) {
             geocoder = new Geocoder(this);
         } else {
@@ -67,7 +67,7 @@ public class Map extends AppCompatActivity implements  OnMapReadyCallback {
             }
         });
 
-        // Set button click listener
+
         buttonShowLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +80,7 @@ public class Map extends AppCompatActivity implements  OnMapReadyCallback {
             }
         });
 
-        // Check location permissions
+
         checkLocationPermissions();
     }
 
@@ -105,14 +105,14 @@ public class Map extends AppCompatActivity implements  OnMapReadyCallback {
     }
 
     private void showLocationOnMap(String address) {
-        // Check if geocoder is available
+
         if (geocoder == null) {
             Toast.makeText(this, "Geocoding service not available", Toast.LENGTH_SHORT).show();
             return;
         }
 
         try {
-            // Use geocoding to get coordinates from address
+
             List<Address> addresses = geocoder.getFromLocationName(address, 1);
 
             if (addresses != null && !addresses.isEmpty()) {
@@ -186,8 +186,5 @@ public class Map extends AppCompatActivity implements  OnMapReadyCallback {
             }
         }
     }
-
-
-
 
 }
