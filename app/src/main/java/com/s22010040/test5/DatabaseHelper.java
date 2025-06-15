@@ -1,4 +1,4 @@
-package com.s22010040.lab2;
+package com.s22010040.test5;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    com.s22010040.lab2.DatabaseHelper myDb;
+    com.s22010040.test5.DatabaseHelper myDb;
     EditText editUsername, editPassword ;
     Button btnAddData ;
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        myDb = new com.s22010040.lab2.DatabaseHelper(this);
+        myDb = new com.s22010040.test5.DatabaseHelper(this);
 
         editUsername = findViewById(R.id.editUsername);
         editPassword = findViewById(R.id.editPassword);
